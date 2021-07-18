@@ -14,6 +14,10 @@ const typeDefs = `
     value: Int
   }
 
+  type Temperature {
+    celsius: Float
+  }
+
   type Orientation {
     roll: Float
     pitch: Float
@@ -22,6 +26,7 @@ const typeDefs = `
 
   type Atom {
     illuminance: [Light]
+    temperature: [Temperature]
     angles: [Orientation]
   }
 
