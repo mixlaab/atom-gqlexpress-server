@@ -10,21 +10,19 @@ require("dotenv").config();
 
 //types query/mutation/subscription
 const typeDefs = `
-type Light {
-    visible: Int
-    full: Int
+  type Light {
     value: Int
   }
 
-  type Accelerometer {
-    roll: Int
-    pitch: Int
-    yaw: Int
+  type Orientation {
+    roll: Float
+    pitch: Float
+    yaw: Float
   }
 
   type Atom {
     illuminance: [Light]
-    acceleration: [Accelerometer]
+    angles: [Orientation]
   }
 
   type Query {
